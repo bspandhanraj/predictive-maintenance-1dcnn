@@ -60,3 +60,28 @@ The ROC curve evaluates the model's diagnostic ability across different discrimi
 - Area Under the Curve (AUC): 0.992
 
 - Interpretation: An AUC score of 0.992 indicates an exceptional capacity to separate normal signals from faulty ones. The curve sharply hugs the top-left corner, meaning the network achieves a very high True Positive Rate (Sensitivity) while maintaining a near-zero False Positive Rate, which is a mandatory requirement for automated predictive maintenance systems.
+
+# 🚀 Deployment on Seeed Studio XIAO ESP32-C3
+
+This section guides you through deploying the quantized TinyML 1D-CNN model onto the **Seeed Studio XIAO ESP32-C3** thumb-sized microcontroller for real-time, on-device anomaly detection.
+
+---
+
+## 🏗️ Hardware Architecture & Pin Configuration
+
+The XIAO ESP32-C3 is built around a highly efficient 32-bit RISC-V single-core processor. In this predictive maintenance setup, we interface an external analog/digital sensor (such as an accelerometer or temperature sensor) to monitor machine vibration.
+
+## ⚡ Flashing Instructions
+1. Connect your Seeed Studio XIAO ESP32-C3 to your computer via a USB Type-C data cable.
+
+2. Open the xiao_esp32c3_inference.ino sketch in your IDE.
+
+3. Select the board: Tools > Board > ESP32 Arduino > Seeed XAIO ESP32C3.
+
+4. Configure the settings:
+
+5. Flash Frequency: 80MHz
+
+6. Upload Speed: 921600 baud
+
+7. Click Upload. Open your Serial Monitor at 115200 baud to monitor the real-time classification metrics and latency reports.
