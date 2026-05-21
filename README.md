@@ -28,7 +28,7 @@ The model was evaluated on a reserved test dataset to measure its ability to dis
 The confusion matrix demonstrates the model's high precision and recall, minimizing costly false positives (unnecessary maintenance interventions) and critical false negatives (missed equipment failures).
 
 |True Class \ Predicted | Normal|	Fault Type A	|Fault Type B|
-|-------------------------------|---------------|------------|
+|-----------------------|-------|---------------|------------|
 |Normal|	98.5%	| 1.0% | 0.5%|
 |------|--------|------|-----|
 |Fault |Type A	|1.2%	|97.8%	|1.0%|
