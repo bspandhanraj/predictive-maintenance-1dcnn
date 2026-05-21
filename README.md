@@ -6,7 +6,7 @@
 
 The following diagram illustrates the end-to-end data pipeline, from raw sensor acquisition on the edge device to fault classification.
 
-mermaid
+```mermaid
 graph TD
     A[Raw Sensor Data Acquisition] --> B[Signal Preprocessing & Noise Filtering]
     B --> C[Time-Series Windowing]
@@ -22,7 +22,8 @@ graph TD
     
     class A hardware;
     class B,C,D,E compute;
-    class H action; 
+    class H action;
+```
 
 ## 🧰 Tools & Technologies Used
 This project integrates industry-standard tools across the machine learning and embedded engineering stacks:
