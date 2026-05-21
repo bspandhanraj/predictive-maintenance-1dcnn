@@ -6,6 +6,24 @@
 
 The following diagram illustrates the end-to-end data pipeline, from raw sensor acquisition on the edge device to fault classification.
 
+mermaid
+graph TD
+    A[Raw Sensor Data Acquisition] --> B[Signal Preprocessing & Noise Filtering]
+    B --> C[Time-Series Windowing]
+    C --> D[1D-CNN Feature Extraction]
+    D --> E[Fully Connected Classification Layer]
+    E --> F{Health Status?}
+    F -->|Normal Operation| G[Log Data & Continue]
+    F -->|Fault Detected| H[Trigger Maintenance Alert]
+    
+    classDef hardware fill:#2b3137,stroke:#fafbfc,stroke-width:2px,color:#fff;
+    classDef compute fill:#0366d6,stroke:#fafbfc,stroke-width:2px,color:#fff;
+    classDef action fill:#d73a49,stroke:#fafbfc,stroke-width:2px,color:#fff;
+    
+    class A hardware;
+    class B,C,D,E compute;
+    class H action; 
+
 ## 🧰 Tools & Technologies Used
 This project integrates industry-standard tools across the machine learning and embedded engineering stacks:
 
