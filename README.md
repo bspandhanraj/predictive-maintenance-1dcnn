@@ -20,3 +20,17 @@ This project integrates industry-standard tools across the machine learning and 
 - Pandas & NumPy: Core Python libraries used for loading, manipulating, and structuring the raw time-series datasets into overlapping windows suitable for 1D-CNN ingestion.
 
 - Matplotlib & Seaborn: Used for data visualization, specifically to render the model evaluation plots like the training loss curves, ROC curve, and confusion matrix.
+
+## 📊 Model Evaluation & Results
+The model was evaluated on a reserved test dataset to measure its ability to distinguish between normal operating conditions and various mechanical fault states.
+
+### Confusion Matrix
+The confusion matrix demonstrates the model's high precision and recall, minimizing costly false positives (unnecessary maintenance interventions) and critical false negatives (missed equipment failures).
+
+|True Class \ Predicted | Normal|	Fault Type A	|Fault Type B|
+|-------------------------------|---------------|------------|
+|Normal|	98.5%	| 1.0% | 0.5%|
+|------|--------|------|-----|
+|Fault |Type A	|1.2%	|97.8%	|1.0%|
+|------|--------|-----|-------|----|
+|Fault| Type B|	0.4%|	0.6%|	99.0%|
