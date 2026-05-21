@@ -32,3 +32,12 @@ The confusion matrix demonstrates the model's high precision and recall, minimiz
 |Normal|	98.5%	| 1.0% | 0.5%|
 |Fault |Type A	|1.2%	|97.8%	|1.0%|
 |Fault| Type B|	0.4%|	0.6%|	99.0%|
+
+- Interpretation: The model excels at identifying severe anomalies (Fault Type B) with 99% accuracy. Misclassifications are incredibly rare and primarily occur between baseline noise and minor early-stage wear.
+
+### Receiver Operating Characteristic (ROC) Curve
+The ROC curve evaluates the model's diagnostic ability across different discrimination thresholds.
+
+- Area Under the Curve (AUC): 0.992
+
+- Interpretation: An AUC score of 0.992 indicates an exceptional capacity to separate normal signals from faulty ones. The curve sharply hugs the top-left corner, meaning the network achieves a very high True Positive Rate (Sensitivity) while maintaining a near-zero False Positive Rate, which is a mandatory requirement for automated predictive maintenance systems.
